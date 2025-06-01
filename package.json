@@ -1,0 +1,27 @@
+{
+  "name": "estudos-ia",
+  "version": "0.0.1",
+  "description": "Construindo projetos atraves de prompts e usando o maximo possivel do potencial das IAs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/deividmarques/estudos-ia.git"
+  },
+  "keywords": [
+    "frontend",
+    "ia",
+    "web",
+    "inteligencia",
+    "artificial",
+    "frontend-end"
+  ],
+  "author": "Deivid Marques - DvD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deividmarques/estudos-ia/issues"
+  },
+  "homepage": "https://github.com/deividmarques/estudos-ia#readme"
+}
