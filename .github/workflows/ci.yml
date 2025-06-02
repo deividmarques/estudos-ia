@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar lint
+        run: npm run lint
+
+      - name: Rodar testes unitários
+        run: npm run test
+
+      - name: Build do projeto
+        run: npm run build
+
+      - name: Iniciar servidor local
+        run: npm run preview &
+
+      - name: Esperar o servidor subir
+        run: npx wait-on http://localhost:4173
+
+      - name: Rodar testes E2E (Cypress)
+        run: npx cypress run --browser electron --headless
