@@ -1,17 +1,18 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { userEvent, within } from '@storybook/testing-library';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import Home from '../pages/Home';
 import { lightTheme, darkTheme } from '../themes';
-import { expect } from '@storybook/jest';
 
-const withMuiTheme = (Story: any, context: any) => {
+import type { Decorator } from '@storybook/react-vite';
+
+const withMuiTheme: Decorator = (Story, context) => {
   const theme = context.args.mode === 'dark' ? darkTheme : lightTheme;
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Story {...context.args} />
+      <Story />
     </ThemeProvider>
   );
 };
@@ -48,7 +49,9 @@ export const LightMode: Story = {
     const initialMode = globals?.mode ?? args.mode ?? 'light';
     const [mode, setMode] = React.useState<'light' | 'dark'>(initialMode);
     React.useEffect(() => {
-      updateGlobals && updateGlobals({ mode });
+      if (updateGlobals) {
+        updateGlobals({ mode });
+      }
     }, [mode, updateGlobals]);
     return (
       <Home

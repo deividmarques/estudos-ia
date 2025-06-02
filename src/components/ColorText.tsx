@@ -6,7 +6,7 @@ import { SxProps, Theme } from '@mui/material/styles';
 function getPaletteColor(theme: Theme, token: string): string | undefined {
   return token
     .split('.')
-    .reduce((acc: any, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), theme.palette);
+    .reduce<unknown>((acc, key) => (acc && typeof acc === 'object' && key in acc ? (acc as Record<string, unknown>)[key] : undefined), theme.palette) as string | undefined;
 }
 
 interface ColorTextProps {
