@@ -4,15 +4,19 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#013220', // Verde escuro
+      main: '#0057B7', // Azul vibrante, acessível
     },
     secondary: {
-      main: '#00897b', // Verde frio
+      main: '#FFB300', // Amarelo escuro, vibrante
     },
     background: {
-      default: '#f4f6f8',
-      paper: '#e3f2fd'
-    }
+      default: '#FFFFFF', // Branco
+      paper: '#F5F7FA', // Cinza muito claro
+    },
+    text: {
+      primary: '#1A1A1A', // Quase preto
+      secondary: '#333333', // Cinza escuro
+    },
   }
 })
 

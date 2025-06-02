@@ -6,7 +6,13 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Link as RouterLink } from "react-router-dom";
 
-function App() {
+interface AppProps {
+  toggleMode: () => void;
+  mode: 'light' | 'dark';
+}
+
+
+function App({ toggleMode, mode }: AppProps) {
   return (
     <>
       <AppBar position="static">
@@ -20,7 +26,7 @@ function App() {
         </Toolbar>
       </AppBar>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home toggleMode={toggleMode} mode={mode} />} />
         <Route path="/fale-conosco" element={<FaleConosco />} />
       </Routes>
     </>

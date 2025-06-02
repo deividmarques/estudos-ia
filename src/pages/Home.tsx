@@ -3,13 +3,22 @@ import {
   Box, Typography, Button, TextField, Checkbox, FormControlLabel, Slider,
   Switch, Radio, RadioGroup, FormLabel, IconButton, Chip, Card, CardContent
 } from '@mui/material'
-// import FavoriteIcon from '@mui/icons-material/Favorite'
 
-const Home: React.FC = () => (
+interface HomeProps {
+  toggleMode: () => void;
+  mode: 'light' | 'dark';
+}
+
+const Home: React.FC<HomeProps> = ({ toggleMode, mode }) => (
   <Box>
     <Typography variant="h4" gutterBottom>
       Exemplos de Componentes MUI
     </Typography>
+    <FormControlLabel
+      control={<Switch checked={mode === 'dark'} onChange={toggleMode} />}
+      label={mode === 'dark' ? 'Dark Mode' : 'Light Mode'}
+      sx={{ mb: 2 }}
+    />
     <Box display="flex" flexWrap="wrap" gap={2}>
       <Button variant="contained" color="primary">Botão</Button>
       <TextField label="Campo de Texto" variant="outlined" />
