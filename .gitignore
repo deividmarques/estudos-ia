@@ -11,3 +11,5 @@ coverage/
 *.tsbuildinfo
 *storybook.log
 storybook-static
+cypress/screenshots/
+cypress/videos/
