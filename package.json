@@ -1,27 +1,32 @@
 {
   "name": "estudos-ia",
-  "version": "0.0.1",
-  "description": "Construindo projetos atraves de prompts e usando o maximo possivel do potencial das IAs",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/deividmarques/estudos-ia.git"
-  },
-  "keywords": [
-    "frontend",
-    "ia",
-    "web",
-    "inteligencia",
-    "artificial",
-    "frontend-end"
-  ],
-  "author": "Deivid Marques - DvD",
+  "author": "Deivid Marquues - DvD",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/deividmarques/estudos-ia/issues"
+  "description": "",
+  "devDependencies": {
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^4.5.0",
+    "eslint": "^9.28.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4"
   },
-  "homepage": "https://github.com/deividmarques/estudos-ia#readme"
+  "dependencies": {
+    "@mui/material": "^7.1.0",
+    "@mui/styled-engine-sc": "^7.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
+    "styled-components": "^6.1.18"
+  }
 }
