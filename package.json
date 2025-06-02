@@ -9,8 +9,8 @@
     "test:watch": "vitest watch",
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext .ts,.tsx",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "doc": "storybook dev -p 6006",
+    "build-doc": "storybook build"
   },
   "author": "Deivid Marquues - DvD",
   "license": "ISC",
@@ -21,7 +21,9 @@
     "@storybook/addon-docs": "^9.0.4",
     "@storybook/addon-onboarding": "^9.0.4",
     "@storybook/addon-vitest": "^9.0.4",
+    "@storybook/jest": "^0.2.2",
     "@storybook/react-vite": "^9.0.4",
+    "@storybook/testing-library": "^0.2.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@types/react": "^19.1.6",

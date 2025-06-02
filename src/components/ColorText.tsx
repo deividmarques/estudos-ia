@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import { SxProps, Theme } from '@mui/material/styles';
 
 // Função utilitária para acessar propriedades aninhadas via string (ex: 'primary.main')
@@ -13,17 +13,19 @@ interface ColorTextProps {
   text: string;
   colorToken: string; // Aceita qualquer token de cor
   sx?: SxProps<Theme>;
+  onClick?: () => void;
 }
 
-const ColorText: React.FC<ColorTextProps> = ({ text, colorToken, sx }) => (
-  <Typography
+const ColorText: React.FC<ColorTextProps> = ({ text, colorToken, sx, onClick }) => (
+  <Button
     sx={{
       color: theme => getPaletteColor(theme, colorToken),
       ...sx,
     }}
+    onClick={onClick}
   >
     {text}
-  </Typography>
+  </Button>
 );
 
 export default ColorText;

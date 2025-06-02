@@ -32,4 +32,11 @@ describe('ColorText', () => {
     );
     expect(screen.getByText('Texto grande e negrito')).toBeInTheDocument();
   });
+
+  it('chama onClick ao clicar no botão', () => {
+    const handleClick = vi.fn();
+    render(<ColorText text="Clique aqui" colorToken="primary.main" onClick={handleClick} />);
+    screen.getByText('Clique aqui').click();
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 });

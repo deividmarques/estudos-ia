@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ColorText from '../components/ColorText';
+import { userEvent, within } from '@storybook/testing-library';
 
 const meta: Meta<typeof ColorText> = {
   title: 'Components/ColorText',
@@ -60,5 +61,18 @@ export const CustomStyle: Story = {
     text: 'Texto grande e negrito',
     colorToken: 'primary.main',
     sx: { fontSize: 32, fontWeight: 'bold' },
+  },
+};
+
+export const Clickable: Story = {
+  args: {
+    text: 'Clique em mim',
+    colorToken: 'primary.main',
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const button = await canvas.getByText(args.text);
+    await userEvent.click(button);
+    // Aqui você pode adicionar expect usando @storybook/jest se desejar
   },
 };
