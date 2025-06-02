@@ -3,6 +3,7 @@ import {
   Box, Typography, Button, TextField, Checkbox, FormControlLabel, Slider,
   Switch, Radio, RadioGroup, FormLabel, IconButton, Chip, Card, CardContent
 } from '@mui/material'
+import ColorText from '../components/ColorText'
 
 interface HomeProps {
   toggleMode: () => void;
@@ -19,6 +20,7 @@ const Home: React.FC<HomeProps> = ({ toggleMode, mode }) => (
       label={mode === 'dark' ? 'Dark Mode' : 'Light Mode'}
       sx={{ mb: 2 }}
     />
+    <ColorText text="Texto com cor do tema primário" colorToken="success.main" sx={{ mb: 2 }} />
     <Box display="flex" flexWrap="wrap" gap={2}>
       <Button variant="contained" color="primary">Botão</Button>
       <TextField label="Campo de Texto" variant="outlined" />
