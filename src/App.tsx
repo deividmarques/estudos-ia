@@ -5,12 +5,12 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Link as RouterLink } from "react-router-dom";
+import Page from "./components/Page";
 
 interface AppProps {
   toggleMode: () => void;
   mode: 'light' | 'dark';
 }
-
 
 function App({ toggleMode, mode }: AppProps) {
   return (
@@ -26,8 +26,16 @@ function App({ toggleMode, mode }: AppProps) {
         </Toolbar>
       </AppBar>
       <Routes>
-        <Route path="/" element={<Home toggleMode={toggleMode} mode={mode} />} />
-        <Route path="/fale-conosco" element={<FaleConosco />} />
+        <Route path="/" element={
+          <Page title="Home | Estudos IA">
+            <Home toggleMode={toggleMode} mode={mode} />
+          </Page>
+        } />
+        <Route path="/fale-conosco" element={
+          <Page title="Fale Conosco | Estudos IA">
+            <FaleConosco />
+          </Page>
+        } />
       </Routes>
     </>
   );
