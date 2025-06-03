@@ -10,6 +10,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Limpar cache do Playwright
+        run: rm -rf ~/.cache/ms-playwright || true
+
       - name: Checkout código
         uses: actions/checkout@v4
 
