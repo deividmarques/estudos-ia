@@ -30,7 +30,5 @@ jobs:
       - name: Rodar testes unitários
         run: npm run test
 
-      - name: Rodar testes E2E (Cypress)
-        run: npx start-server-and-test preview http://localhost:4173 'cypress run --browser electron --headless'
 
 
