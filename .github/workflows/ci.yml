@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 20
 
+      - name: Limpar node_modules e cache npm
+        run: |
+          rm -rf node_modules
+          npm cache clean --force
+
       - name: Instalar dependências
         run: npm install
 
@@ -32,3 +37,5 @@ jobs:
 
       - name: Rodar testes E2E (Cypress)
         run: npx start-server-and-test preview http://localhost:4173 'cypress run --browser electron --headless'
+
+
