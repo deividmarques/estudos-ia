@@ -16,9 +16,25 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
-  "author": "Deivid Marquues - DvD",
+  "author": "Deivid Marques",
   "license": "ISC",
   "description": "",
+  "tags": [
+    "react",
+    "vite",
+    "typescript",
+    "mui",
+    "storybook",
+    "vitest",
+    "cypress",
+    "eslint",
+    "prettier",
+    "github-pages",
+    "a11y",
+    "ci-cd",
+    "frontend",
+    "front-end"
+  ],
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.0",
     "@storybook/addon-a11y": "^9.0.4",
