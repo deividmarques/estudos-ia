@@ -18,11 +18,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Limpar node_modules e cache npm
-        run: |
-          rm -rf node_modules
-          npm cache clean --force
-
       - name: Instalar dependências
         run: npm install
 
