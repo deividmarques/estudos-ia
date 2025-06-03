@@ -17,7 +17,7 @@ function App({ toggleMode, mode }: AppProps) {
     <>
       <AppBar position="static">
         <Toolbar>
-          <Button color="inherit" component={RouterLink} to="/home">
+          <Button color="inherit" component={RouterLink} to="/">
             Home
           </Button>
           <Button color="inherit" component={RouterLink} to="/fale-conosco">
@@ -26,7 +26,7 @@ function App({ toggleMode, mode }: AppProps) {
         </Toolbar>
       </AppBar>
       <Routes>
-        <Route path="/home" element={<Home toggleMode={toggleMode} mode={mode} />} />
+        <Route path="/" element={<Home toggleMode={toggleMode} mode={mode} />} />
         <Route path="/fale-conosco" element={<FaleConosco />} />
       </Routes>
     </>
