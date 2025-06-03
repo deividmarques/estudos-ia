@@ -20,12 +20,7 @@ export default defineWorkspace([
     ],
     test: {
       name: 'storybook',
-      browser: {
-        enabled: true,
-        headless: true,
-        provider: 'playwright',
-        instances: [{ browser: 'chromium' }]
-      },
+      // Removido bloco browser para evitar dependência do Playwright no CI
       setupFiles: ['.storybook/vitest.setup.ts'],
     },
   },

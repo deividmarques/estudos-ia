@@ -1,2 +1,3 @@
 import '@testing-library/jest-dom';
-/// <reference types="@vitest/browser/providers/playwright" />
+// Removido o provider do Playwright para evitar dependência desnecessária no CI
+// <reference types="@vitest/browser/providers/playwright" />
