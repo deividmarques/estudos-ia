@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/estudo-ia/', // necessário para GitHub Pages
+  base: '/estudos-ia/', // necessário para GitHub Pages (corrigido)
   plugins: [react()],
   test: {
     environment: 'jsdom',
