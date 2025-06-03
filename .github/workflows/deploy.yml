@@ -22,8 +22,17 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Rodar lint
+        run: npm run lint
+
+      - name: Rodar testes unitários
+        run: npm run test
+
       - name: Build de produção
         run: npm run build
+
+      - name: Criar arquivo .nojekyll
+        run: touch dist/.nojekyll
 
       - name: Deploy para o GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
