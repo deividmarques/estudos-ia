@@ -12,7 +12,7 @@ const ThemeWrapper: React.FC = () => {
   return (
     <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <App toggleMode={toggleMode} mode={mode} />
       </BrowserRouter>
     </ThemeProvider>
