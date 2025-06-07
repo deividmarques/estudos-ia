@@ -41,7 +41,7 @@ export function useBuscaCep(cep: string) {
           setEndereco(data);
         }
       })
-      .catch((err) => {
+      .catch(() => {
         setError('Erro ao buscar CEP. Tente novamente mais tarde.');
         setEndereco(null);
       })
