@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Link as RouterLink } from "react-router-dom";
 import Page from "./components/Page";
+import NovoEndereco from "./pages/NovoEndereco";
 
 interface AppProps {
   toggleMode: () => void;
@@ -23,6 +24,9 @@ function App({ toggleMode, mode }: AppProps) {
           <Button color="inherit" component={RouterLink} to="/fale-conosco">
             Fale Conosco
           </Button>
+          <Button color="inherit" component={RouterLink} to="/novo-endereco">
+            Novo Endereço
+          </Button>
         </Toolbar>
       </AppBar>
       <Routes>
@@ -34,6 +38,11 @@ function App({ toggleMode, mode }: AppProps) {
         <Route path="/fale-conosco" element={
           <Page title="Fale Conosco | Estudos IA">
             <FaleConosco />
+          </Page>
+        } />
+        <Route path="/novo-endereco" element={
+          <Page title="Novo Endereço | Estudos IA">
+            <NovoEndereco />
           </Page>
         } />
       </Routes>
